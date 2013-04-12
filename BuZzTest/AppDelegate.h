@@ -9,12 +9,14 @@
 #import <Cocoa/Cocoa.h>
 
 @interface AppDelegate : NSObject <NSApplicationDelegate> {
-    IBOutlet NSMenu *statusMenu;
     NSStatusItem *statusItem;
+    IBOutlet NSMenu *statusMenu;
+    
+    IBOutlet NSPopover *statusPopover;
+    IBOutlet NSViewController *popoverController;
 }
 
-@property (assign) IBOutlet NSWindow *window;
-
 - (BOOL) application:(NSApplication *)sender openFile:(NSString *)filename;
+- (IBAction)test:(id)sender;
 
 @end
